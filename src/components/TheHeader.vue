@@ -1,5 +1,5 @@
 <script>
-import { store, filterMovies } from '../store';
+import { store, filterMoviesShows } from '../store';
 
 export default {
     data() {
@@ -8,7 +8,7 @@ export default {
         }
     },
     methods: {
-        filterMovies
+        filterMoviesShows
     }
 }
 </script>
@@ -18,8 +18,8 @@ export default {
         <div class="container-fluid p-4">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Cerca un film o una serie"
-                    aria-describedby="button-addon2" v-model="store.searchMovies">
-                <button class="btn btn-secondary" type="button" id="button-addon2" @click="filterMovies">
+                    aria-describedby="button-addon2" v-model="store.searchMoviesShows">
+                <button class="btn btn-secondary" type="button" id="button-addon2" @click="filterMoviesShows">
                     Button
                 </button>
             </div>

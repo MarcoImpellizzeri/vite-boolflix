@@ -12,16 +12,19 @@ export default {
 
 <template>
     <div class="container">
-        <ul>
-            <li v-for="(movie, i) in store.moviesList" :key="`'movie'${i}`">{{ movie.title }}
-                <ul>
-                    <li>{{ movie.original_title }}</li>
-                    <li>{{ movie.original_language }}</li>
-                    <li>{{ movie.vote_average }}</li>
-                </ul>
-            </li>
+        <ul class="list-unstyled" v-for="(movieShow, i) in store.moviesShowsList" :key="`'movieShow'${i}`">
+            <li class="title" v-if="movieShow.name">{{ movieShow.name }}</li>
+            <li class="title" v-if="movieShow.title">{{ movieShow.title }}</li>
+            <li v-if="movieShow.original_title">{{ movieShow.original_title }}</li>
+            <li v-if="movieShow.original_name">{{ movieShow.original_name }}</li>
+            <li v-if="movieShow.original_language">{{ movieShow.original_language }}</li>
+            <li v-if="movieShow.vote_average">{{ movieShow.vote_average }}</li>
         </ul>
     </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.title {
+    font-weight: bold;
+}
+</style>
