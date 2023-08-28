@@ -1,12 +1,12 @@
-<script >
-import { store } from './store';
+<script>
+// import { store } from './store';
 
 export default {
-    data() {
-        return {
-            store,
-        }
-    },
+    // data() {
+    //     return {
+    //         store,
+    //     }
+    // },
 
 }
 </script>
