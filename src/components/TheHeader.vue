@@ -35,7 +35,7 @@ export default {
 
     .input-group {
         width: 0;
-        min-width: 300px;
+        min-width: 280px;
 
         .form-control {
             border: 0;
