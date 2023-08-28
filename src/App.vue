@@ -1,5 +1,18 @@
 <script >
+import { store } from './store';
+import TheHeader from './components/TheHeader.vue';
+import MainCards from './components/MainCards.vue';
+
 export default {
+  components: {
+    TheHeader,
+    MainCards,
+  },
+  data() {
+    return {
+      store,
+    }
+  },
 
 }
 </script>
@@ -9,7 +22,7 @@ export default {
     Milestone 0:
     Progettare la struttura del global state sulla linea degli esercizi svolti nei giorni
     precedenti.
-    
+
     Milestone 1:
     Creare un layout base con una searchbar (una input e un button) in cui possiamo
     scrivere completamente o parzialmente il nome di un film. Possiamo, cliccando il
@@ -21,6 +34,8 @@ export default {
     3. Lingua
     4. Voto
 -->
+
+  <TheHeader />
 </template>
 
 <style lang="scss"></style>
