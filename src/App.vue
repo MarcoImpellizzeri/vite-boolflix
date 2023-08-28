@@ -1,19 +1,18 @@
 <script>
-
+import { store } from './store';
 import TheHeader from './components/TheHeader.vue';
 import MainCards from './components/MainCards.vue';
-// import { store } from './store';
 
 export default {
   components: {
     TheHeader,
     MainCards,
   },
-  // data() {
-  //   return {
-  //     store,
-  //   }
-  // },
+  data() {
+    return {
+      store,
+    }
+  },
 
 }
 </script>
