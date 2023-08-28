@@ -7,7 +7,6 @@ export default {
             store,
         }
     },
-
 }
 </script>
 
@@ -16,7 +15,7 @@ export default {
         <div class="container-fluid p-4">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Cerca un film o una serie"
-                    aria-describedby="button-addon2">
+                    aria-describedby="button-addon2" v-model="store.searchMovies">
                 <button class="btn btn-secondary" type="button" id="button-addon2">Button</button>
             </div>
         </div>
@@ -32,6 +31,7 @@ export default {
     .input-group {
         width: 0;
         min-width: 300px;
+
         .form-control {
             border: 0;
             box-shadow: none;
