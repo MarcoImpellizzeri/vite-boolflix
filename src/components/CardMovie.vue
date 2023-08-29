@@ -19,7 +19,7 @@ export default {
 
 <template>
     <div v-for="(movie, i) in store.moviesList" :key="`'movie'${i}`">
-        <div class="card text-bg-dark mx-3">
+        <div class="card text-bg-dark mx-3" v-if="movie.poster_path !== null">
             <img v-if="movie.poster_path" :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`"
                 class="card-img rounded-0" alt="">
             <div class="card-img-overlay overflow-y-auto rounded-0">

@@ -16,7 +16,7 @@ export default {
 <template>
     <header>
         <div class="container-fluid p-4">
-            <h1 class="text-danger text-uppercase m-0">Boolflix</h1>
+            <h1 class="text-danger text-uppercase m-0 fw-bold">Boolflix</h1>
             <div>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Cerca un film o una serie"
