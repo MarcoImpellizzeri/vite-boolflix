@@ -22,7 +22,7 @@ export default {
         <div class="card text-bg-dark mx-3">
             <img v-if="movie.poster_path" :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`"
                 class="card-img rounded-0" alt="">
-            <div class="card-img-overlay overflow-y-auto">
+            <div class="card-img-overlay overflow-y-auto rounded-0">
                 <p v-if="movie.name" class="card-text"><b>Titolo:</b>{{ movie.name }}</p>
                 <p v-if="movie.title" class="card-text"><b>Titolo:</b>{{ movie.title }}</p>
                 <p v-if="movie.original_title" class="card-text"><b>Titolo in lingua originale:</b> {{
@@ -50,27 +50,4 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card {
-    width: 342px;
-    height: 100%;
-
-    img {
-        border-radius: 0;
-        height: 100%;
-
-    }
-
-    .card-img-overlay {
-        display: none;
-    }
-
-    &:hover .card-img-overlay {
-        display: block;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .fa-star {
-        color: rgb(255, 189, 7);
-    }
-}
 </style>
