@@ -2,7 +2,7 @@ import axios from 'axios';
 import { reactive } from 'vue'
 
 export const store = reactive({
-    searchMovies: "",
+    searchMoviesShows: "",
     moviesShowsList: [],
 })
 
@@ -17,5 +17,5 @@ export function filterMoviesShows() {
         store.moviesShowsList = response.data.results;
         console.log(store.moviesShowsList);
     })
-    console.log("funzione invocata");
 }
+
