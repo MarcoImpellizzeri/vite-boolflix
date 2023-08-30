@@ -5,6 +5,7 @@ export const store = reactive({
     searchMoviesShows: "",
     moviesList: [],
     showList: [],
+    movieShowList: [],
 })
 
 // funzione per fare un array di film
@@ -30,7 +31,35 @@ export function filterMoviesShows() {
     })
 }
 
+// funzione che fa una chiamata all'avvio per film e serie di tendenza
+export function filterMoviesShowsStart() {
+    store.moviesList = [];
+
+    const movieUrl = `https://api.themoviedb.org/3/trending/movie/week?api_key=40a56ebbdeaca35e7a4e5112a4d2ae72&language=it-IT`
+
+    axios.get(movieUrl).then((response) => {
+
+        store.moviesList = response.data.results;
+        console.log(store.moviesList);
+    })
+
+    store.showList = [];
+
+    const showUrl = `https://api.themoviedb.org/3/trending/tv/week?api_key=40a56ebbdeaca35e7a4e5112a4d2ae72&language=it-IT`
+
+    axios.get(showUrl).then((response) => {
+
+        store.showList = response.data.results;
+        console.log(store.showList);
+    })
+}
+
 // funzione che cambia i voti da 1 a 10 in voti da 1 a 5
 export function mapVote(originalVote) {
     return Math.round(originalVote / 2);
 }
+
+// funzione per trovare l'url dell'immagine
+// export function getImage() {
+    
+// }

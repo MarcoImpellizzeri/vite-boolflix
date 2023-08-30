@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+import { store, filterMoviesShowsStart } from '../store';
 import CardMovie from './CardMovie.vue'
 import CardShow from './CardShow.vue'
 
@@ -13,6 +13,9 @@ export default {
             store,
         }
     },
+    mounted() {
+        filterMoviesShowsStart();
+    }
 }
 </script>
 
@@ -37,5 +40,16 @@ h2 {
 .my-container {
     overflow-x: auto;
     display: flex;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #000000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #b10909;
+        border-radius: 25px;
+        border: 4px solid #000000;
+    }
 }
 </style>

@@ -16,7 +16,7 @@ export default {
 <template>
     <header>
         <div class="container-fluid p-4">
-            <h1 class="text-danger text-uppercase m-0 fw-bold">Boolflix</h1>
+            <h1 class="text-uppercase m-0 fw-bold">Boolflix</h1>
             <div>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Cerca un film o una serie"
@@ -34,9 +34,12 @@ export default {
 .container-fluid {
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.562);
     align-items: center;
 
+    h1 {
+        color: #b10909;
+    }
     .input-group {
         width: 0;
         min-width: 280px;
