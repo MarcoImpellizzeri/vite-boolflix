@@ -2,11 +2,13 @@
 import { store, filterMoviesShowsStart } from '../store';
 import CardMovie from './CardMovie.vue'
 import CardShow from './CardShow.vue'
+import CardsAll from './CardsAll.vue'
 
 export default {
     components: {
         CardMovie,
-        CardShow
+        CardShow,
+        CardsAll
     },
     data() {
         return {
@@ -27,6 +29,10 @@ export default {
     <h2>SERIE</h2>
     <div class="my-container px-5 pt-5 pb-4 g-2">
         <CardShow />
+    </div>
+    <h2>FILM E SERIE</h2>
+    <div class="my-container px-5 pt-5 pb-4 g-2">
+        <CardsAll />
     </div>
 </template>
 

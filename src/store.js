@@ -5,7 +5,7 @@ export const store = reactive({
     searchMoviesShows: "",
     moviesList: [],
     showList: [],
-    movieShowList: [],
+    allList: [],
 })
 
 // funzione per fare un array di film
@@ -29,6 +29,16 @@ export function filterMoviesShows() {
         store.showList = response.data.results;
         console.log(store.showList);
     })
+
+    store.allList = [];
+
+    const allUrl = `https://api.themoviedb.org/3/search/multi?api_key=40a56ebbdeaca35e7a4e5112a4d2ae72&query=${store.searchMoviesShows}&page=2&language=it-IT`
+
+    axios.get(allUrl).then((response) => {
+
+        store.allList = response.data.results;
+        console.log(store.allList);
+    })
 }
 
 // funzione che fa una chiamata all'avvio per film e serie di tendenza
@@ -51,6 +61,16 @@ export function filterMoviesShowsStart() {
 
         store.showList = response.data.results;
         console.log(store.showList);
+    })
+
+    store.allList = [];
+
+    const allUrl = `https://api.themoviedb.org/3/trending/all/week?api_key=40a56ebbdeaca35e7a4e5112a4d2ae72&page=2&language=it-IT`
+
+    axios.get(allUrl).then((response) => {
+
+        store.allList = response.data.results;
+        console.log(store.allList);
     })
 }
 
